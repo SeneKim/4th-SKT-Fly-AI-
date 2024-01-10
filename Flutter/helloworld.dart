@@ -10,7 +10,8 @@ void main() {
 // cupertino - apple design sys
 
 class App extends StatelessWidget {
-  // 3개의 flutter widget 중 하나를 상속 받아야함
+  // 3개의 flutter core widget 중 하나를 상속 받아야함
+  // stateless widget : 화면에 무언가를 띄워준다 (state가 정적임)
   // 이를 상속 받기 위해서는 build를 구현해야 한다.
   // flutter가 build에서 무엇을 return하는지 화면에서 보여준다.
   // build = widget의 ui를 만드는 것
@@ -22,9 +23,13 @@ class App extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
+        //appbar에 존재하는 새로운 option
+        centerTitle: true,
+        elevation: 10,
         title: Text('Hello Flutter'),
       ),
       body: Center(
+        //center widget을 만들기 위해 새로운 child를 넣어야 한다.
         child: Text('Hello World!'),
       ),
     ));
